@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="280dp"
+    android:layout_height="match_parent"
+    android:layout_gravity="start"
+    android:clickable="true"
+    android:tag="left">
+
+    <ImageView
+        android:id="@+id/iv_drawer_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/fnn" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/id_draw_menu_header"
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+            <TextView
+                android:id="@+id/id_draw_menu_item_backup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="100dp"
+                android:drawableLeft="@drawable/ic_launcher"
+                android:drawablePadding="15dp"
+                android:gravity="center"
+                android:text="code小生"
+                android:textColor="@android:color/white"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/id_draw_menu_item_download"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="35dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/qrcode_min_cm" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white">
+
+            <TextView
+                android:id="@+id/id_draw_menu_item_main_tv"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:text="设置"
+                android:textSize="18sp" />
+
+            <ListView
+                android:id="@+id/id_draw_menu_item_list_select"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_above="@id/id_draw_menu_item_main_tv"
+                android:divider="@android:color/transparent"
+                android:overScrollMode="never"
+                android:scrollbars="none" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</FrameLayout>
