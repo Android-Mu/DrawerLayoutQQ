@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
         ivDrawerBg = (ImageView) findViewById(R.id.iv_drawer_bg);
         float curTranslationY = ivDrawerBg.getTranslationY();
         ObjectAnimator animator = ObjectAnimator.ofFloat(ivDrawerBg, "translationY", curTranslationY,
-                -70f, 70, curTranslationY);
+                -70f, 60, curTranslationY);
         animator.setDuration(5000);
         animator.setRepeatCount(ObjectAnimator.INFINITE);
         animator.start();
@@ -119,8 +119,8 @@ public class MainActivity extends AppCompatActivity {
                     content.setTranslationX(offset);
 
                     // 缩放效果(之前QQ效果)
-//                    content.setScaleX(1 - slideOffset * 0.5f);
-//                    content.setScaleY(1 - slideOffset * 0.5f);
+//                    content.setTranslationX(1 - slideOffset * 0.5f);
+//                    content.setTranslationY(1 - slideOffset * 0.5f);
                 }
                 tintManager.setStatusBarAlpha(1 - slideOffset);
             }
